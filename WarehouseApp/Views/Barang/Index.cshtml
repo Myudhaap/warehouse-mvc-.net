@@ -1,0 +1,58 @@
+﻿@model List<Barang>
+@{
+ViewData["Title"] = "List Barang";
+int count = 1;
+}
+
+
+
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center">
+        <h2 class="display-4">@ViewData["Title"]</h2>
+        <a asp-area="" asp-action="Create" asp-controller="Barang" class="btn btn-primary">Add Barang</a>
+    </div>
+
+    @if (TempData["success"] != null)
+    {
+    <div class="alert alert-success" role="alert">
+        @TempData["success"]
+    </div>
+    }
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Nama Barang</th>
+                <th>Nama Gudang</th>
+                <th>Harga Barang</th>
+                <th>Jumlah Barang</th>
+                <th>Expired Barang</th>
+                <th class="text-center">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var barang in Model)
+            {
+            <tr>
+                <td>@count</td>
+                <td>@barang.NamaBarang</td>
+                <td>@barang.Gudang.NamaGudang</td>
+                <td>@barang.HargaBarang</td>
+                <td>@barang.JumlahBarang</td>
+                <td>@barang.ExpiredBarang</td>
+                <td>
+                    <div class="d-flex gap-2 justify-content-center">
+                        <a asp-action="Edit" asp-controller="Barang" asp-route-id="@barang.KodeBarang" class="btn btn-primary">Edit</a>
+                        <a asp-action="Delete" asp-controller="Barang" asp-route-id="@barang.KodeBarang" class="btn btn-danger">Delete</a>
+                    </div>
+                </td>
+            </tr>
+
+            count++;
+            }
+            </tbody>
+        </table>
+    </div>
+</div>

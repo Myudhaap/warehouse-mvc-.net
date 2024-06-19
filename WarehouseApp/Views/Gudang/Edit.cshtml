@@ -1,0 +1,19 @@
+﻿@model Gudang;
+
+@{
+    ViewData["Title"] = "Form Edit Gudang";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form id="formGudang" asp-action="Edit" method="post">
+    <input type="text" asp-for="KodeGudang" hidden/>
+    <div class="mb-3">
+        <label asp-for="NamaGudang"></label>
+        <input type="text" class="form-control" asp-for="NamaGudang"/>
+        <span class="text-danger mt-1" style="font-size: .825rem" asp-validation-for="NamaGudang"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <a asp-action="Index" asp-controller="Gudang" class="btn btn-danger">Cancel</a>
+</form>

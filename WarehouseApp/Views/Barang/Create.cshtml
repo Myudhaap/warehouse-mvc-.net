@@ -1,0 +1,59 @@
+﻿@model Barang;
+
+@{
+    ViewData["Title"] = "Form Add Barang";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form id="formBarang" asp-action="Create" method="post">
+    <div class="mb-3">
+        <label asp-for="NamaBarang"></label>
+        <input type="text" class="form-control" asp-for="NamaBarang"/>
+        <span class="text-danger mt-1" style="font-size: .825rem" asp-validation-for="NamaBarang"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="KodeGudang"></label>
+        <select class="form-select" asp-for="KodeGudang">
+            @foreach (var gudang in ViewData["gudang"] as IEnumerable<Gudang>)
+            {
+                <option value="@gudang.KodeGudang">@gudang.NamaGudang</option>
+            }
+        </select>
+        <span class="text-danger mt-1" style="font-size: .825rem" asp-validation-for="KodeGudang"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="HargaBarang"></label>
+        <input type="number" class="form-control" asp-for="HargaBarang"/>
+        <span class="text-danger mt-1" style="font-size: .825rem" asp-validation-for="HargaBarang"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="JumlahBarang"></label>
+        <input type="number" class="form-control" asp-for="JumlahBarang"/>
+        <span class="text-danger mt-1" style="font-size: .825rem" asp-validation-for="JumlahBarang"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="ExpiredBarang"></label>
+        <input type="date" class="form-control" asp-for="ExpiredBarang"/>
+        <span class="text-danger mt-1" style="font-size: .825rem" asp-validation-for="ExpiredBarang"></span>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="button" id="resetBtn" class="btn btn-danger">Reset</button>
+    <a asp-action="Index" asp-controller="Barang" class="btn btn-danger">Cancel</a>
+</form>
+
+
+@section Scripts
+{
+    <script>
+        $(document).ready(function(){
+            $("#resetBtn").click(function (){
+                $("#formBarang")[0].reset();
+                $("#formBarang")[2].reset();
+                $("#formBarang")[3].reset();
+                $("#formBarang")[4].reset();
+            })
+        })
+    </script>
+}

@@ -1,0 +1,50 @@
+﻿@model List<Gudang>
+@{
+    ViewData["Title"] = "List Gudang";
+    int count = 1;
+}
+
+
+
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center">
+        <h2 class="display-4">@ViewData["Title"]</h2>
+        <a asp-area="" asp-action="Create" asp-controller="Gudang" class="btn btn-primary">Add Gudang</a>
+    </div>
+    
+    @if (TempData["success"] != null)
+    {
+    <div class="alert alert-success" role="alert">
+        @TempData["success"]
+    </div>
+    }
+    
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Nama Gudang</th>
+                <th class="text-center">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+                @foreach (var gudang in Model)
+                {
+                    <tr>
+                        <td>@count</td>
+                        <td>@gudang.NamaGudang</td>
+                        <td>
+                            <div class="d-flex gap-2 justify-content-center">
+                                <a asp-action="Edit" asp-controller="Gudang" asp-route-id="@gudang.KodeGudang" class="btn btn-primary">Edit</a>
+                                <a asp-action="Delete" asp-controller="Gudang" asp-route-id="@gudang.KodeGudang" class="btn btn-danger">Delete</a>
+                            </div> 
+                        </td>
+                    </tr>
+
+                    count++;
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

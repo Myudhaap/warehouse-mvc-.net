@@ -18,6 +18,30 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Yudha\tes\FUJITSU\Warehouse\WarehouseApp\WarehouseApp
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Yudha/tes/FUJITSU/Warehouse/WarehouseApp/WarehouseApp/Views/Barang/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFyYW5nXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Yudha/tes/FUJITSU/Warehouse/WarehouseApp/WarehouseApp/Views/Barang/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFyYW5nXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Yudha/tes/FUJITSU/Warehouse/WarehouseApp/WarehouseApp/Views/Barang/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFyYW5nXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Yudha/tes/FUJITSU/Warehouse/WarehouseApp/WarehouseApp/Views/Gudang/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VkYW5nXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Yudha/tes/FUJITSU/Warehouse/WarehouseApp/WarehouseApp/Views/Gudang/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VkYW5nXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Yudha/tes/FUJITSU/Warehouse/WarehouseApp/WarehouseApp/Views/Gudang/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VkYW5nXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Yudha/tes/FUJITSU/Warehouse/WarehouseApp/WarehouseApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
